@@ -21,14 +21,12 @@ return new class extends Migration
             $table->string('course_code');
             $table->string('course_description');
             $table->integer('units');
+            $table->timestamps();
             
         });
     }
 
-    /**
-     * for rollback of php artisan migrate:rollback
-     * reverse the changes made
-     */
+   
     public function down(): void
     {
         Schema::dropIfExists('subjects');

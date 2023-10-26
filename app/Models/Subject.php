@@ -9,4 +9,10 @@ use Illuminate\Database\Eloquent\Model;
 class Subject extends Model
 {
     protected $fillable = ['course_code', 'course_description', 'units'];
+
+     //each subject belongs to a single user
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    } 
 }

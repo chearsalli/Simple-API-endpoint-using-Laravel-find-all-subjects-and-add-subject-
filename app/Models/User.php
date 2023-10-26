@@ -42,4 +42,17 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+   
 }
+
+ class Users extends Models{
+
+ // user can have multiple subjects
+ public function subjects()
+ {
+     return $this->hasMany(Subject::class);
+ }
+
+
+} 

@@ -13,16 +13,16 @@ class ApiController extends Controller
         return response()->json($subjects);
     }
 
-    public function addSubject(Request $request)
-    {
-        $data = $request->validate([
-            'course_code' => 'required|string',
-            'course_description' => 'required|string',
-            'units' => 'required|integer',
-        ]);
+    // public function addSubject(Request $request)
+    // {
+    //     $data = $request->validate([
+    //         'course_code' => 'required|string',
+    //         'course_description' => 'required|string',
+    //         'units' => 'required|integer',
+    //     ]);
 
-        $subject = Subject::create($data);
+    //     $subject = Subject::create($data);
 
-        return response()->json($subject, 201);
-    }
+    //     return response()->json($subject, 201);
+    // }
 }
